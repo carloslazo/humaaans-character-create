@@ -20,3 +20,10 @@
 .App-link {
   color: #09d3ac;
 }
+
+
+.pants-position{
+  margin-top: -78px;
+  position: relative;
+  z-index: -1;
+}
