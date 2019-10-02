@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="740px" height="680px" viewBox="0 0 740 680" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+
+<svg width="740px" height="680px" viewBox="0 0 740 680" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+    
     <title>Scene/Whiteboard</title>
-    <desc>Created with Sketch.</desc>
+    
     <g id="Scene/Whiteboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <path d="M53.8112777,519.87459 C70.1175596,435.901252 235.117775,483.739664 343.290069,457.779141 C451.462363,431.818618 579.439199,310.915231 664.13652,370.139775 C748.833842,429.364318 658.716864,572.527201 464.457517,604.834305 C270.19817,637.141408 37.5049959,603.847928 53.8112777,519.87459 Z" id="Background-Shape" fill="#F2F2F2"></path>
         <g id="Cells" opacity="0.5" transform="translate(95.000000, 125.000000)">

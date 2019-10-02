@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,6 +20,13 @@
 
 .pants-position{
   margin-top: -78px;
+  position: relative;
+  z-index: -1;
+}
+
+
+.head{
+  margin-bottom: -8px;
   position: relative;
   z-index: -1;
 }
