@@ -2,7 +2,6 @@ import React from 'react';
 
 let bottom = 
 {
-  "sitting": {
     "baggyPants": 
     <svg width="300px" height="239px" viewBox="0 0 300 239" version="1.1" xmlns="http://www.w3.org/2000/svg" >
         <g id="Bottom/Sitting/Baggy-Pants" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -86,8 +85,7 @@ let bottom =
           </g>
       </g>
   </svg>
-  },
-  "standing": {
+  ,
     "baggyPants":
     <svg width="300px" height="239px" viewBox="0 0 300 239" version="1.1" xmlns="http://www.w3.org/2000/svg" >
         <g id="Bottom/Standing/Baggy-Pants" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -205,7 +203,6 @@ let bottom =
             </g>
         </g>
     </svg>
-  }
 }
 
 export default bottom;
