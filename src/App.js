@@ -74,27 +74,14 @@ class App extends React.Component {
           </select>
         </div>
         
-        <div class="select">
-          <select
-            onChange={this.handleClick}
-            name="bottom"
-            >
-            {
-              this.state.bottomArray.map( key => {
-                return <option>{key}</option>
-              } )
-            }
-          </select>
-        </div>
-        
-        <div>
+        <span>
           <button
             className="button"
             onClick={this.handleControl}
             name="left"
             id="body"
             >
-            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-left" style={{color: "#3273dc"}}></i>
           </button>
           <button
             className="button"
@@ -102,7 +89,7 @@ class App extends React.Component {
             name="random"
             id="body"
             >
-            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle" style={{color: "#3273dc"}}></i>
           </button>
           <button
             className="button"
@@ -110,9 +97,9 @@ class App extends React.Component {
             name="right"
             id="body"
             >
-              <i class="fas fa-chevron-right"></i>
+              <i class="fas fa-chevron-right" style={{color: "#3273dc"}}></i>
           </button>
-        </div>
+        </span>        
       </div>
     </div>
     );

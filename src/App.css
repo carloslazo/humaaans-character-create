@@ -1,7 +1,10 @@
-button{
-  background: none;
+.button{
+  border-width: 0px;
 }
 
+.button {
+  margin: 0 5px 0px 5px;
+}
 .App {
   text-align: center;
 }
