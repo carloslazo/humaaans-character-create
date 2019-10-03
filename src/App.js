@@ -22,39 +22,36 @@ class App extends React.Component {
   }
   
   handleControl(e){
-    
-    let currentIndex = this.state.bodyArray.findIndex((i) => this.state.body == i)
+    let currentIndex = this.state[e.currentTarget.id + "Array"].findIndex((i) => this.state[e.currentTarget.id] == i)
     
     let nextIndex;
     
     
-    if (e.currentTarget.name == "right" && currentIndex == this.state.bodyArray.length - 1){
+    if (e.currentTarget.name == "right" && currentIndex == this.state[e.currentTarget.id + "Array"].length - 1){
       currentIndex = -1
     }
     
     else if (e.currentTarget.name == "left" && currentIndex == 0) {
-      currentIndex = this.state.bodyArray.length - 1
+      currentIndex = this.state[e.currentTarget.id + "Array"].length - 1
     }
     
     if (e.currentTarget.name == "right"){
-      nextIndex = this.state.bodyArray[currentIndex + 1]
+      nextIndex = this.state[e.currentTarget.id + "Array"][currentIndex + 1]
     }
     
     else if (e.currentTarget.name == "left") {
-      nextIndex = this.state.bodyArray[currentIndex - 1]
+      nextIndex = this.state[e.currentTarget.id + "Array"][currentIndex - 1]
     }
     
     if (e.currentTarget.name == "random"){
-      nextIndex = this.state.bodyArray[Math.floor((Math.random() * this.state.bodyArray.length - 1) + 1)]
+      nextIndex = this.state[e.currentTarget.id + "Array"][Math.floor((Math.random() * this.state[e.currentTarget.id + "Array"].length - 1) + 1)]
     }
         
-    this.setState({"body": nextIndex})
+    this.setState({[e.currentTarget.id]: nextIndex})
   }
   
   render(){
-    
-    console.log(this.state.body);
-    
+        
     return (
     <div className="App">
       <div>
@@ -92,25 +89,26 @@ class App extends React.Component {
         
         <div>
           <button
+            className="button"
             onClick={this.handleControl}
             name="left"
-            value="body"
-            id="hey"
+            id="body"
             >
             <i class="fas fa-chevron-left"></i>
           </button>
           <button
+            className="button"
             onClick={this.handleControl}
             name="random"
-            id="hey"
+            id="body"
             >
             <i class="fas fa-circle"></i>
           </button>
           <button
+            className="button"
             onClick={this.handleControl}
             name="right"
-            value="body"
-            id="hey"
+            id="body"
             >
               <i class="fas fa-chevron-right"></i>
           </button>
