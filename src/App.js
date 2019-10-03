@@ -14,6 +14,7 @@ class App extends React.Component {
     }
     this.handleClick = this.handleClick.bind(this);
     this.handleControl = this.handleControl.bind(this);
+    this.handlePicker = this.handlePicker.bind(this);
   }
   
   handleClick(e){
@@ -50,13 +51,19 @@ class App extends React.Component {
     this.setState({[e.currentTarget.id]: nextIndex})
   }
   
+  handlePicker(e){
+    console.log(document.getElementById("Skin"));
+    document.getElementById("Skin").style["fill"] = "blue";
+  }
+  
   render(){
-        
     return (
     <div className="App">
-      <div>
+      <div
+        onClick={this.handlePicker}
+        >
         <div>{body[this.state.body]}</div>
-        <div className="pants-position">{bottom[this.state.bottom]}</div>
+        <div>{bottom[this.state.bottom]}</div>
       </div>
       
       <div>
@@ -96,6 +103,49 @@ class App extends React.Component {
             onClick={this.handleControl}
             name="right"
             id="body"
+            >
+              <i class="fas fa-chevron-right" style={{color: "#3273dc"}}></i>
+          </button>
+        </span>        
+      </div>
+      
+      <div>
+        <div class="select">
+          <select
+            onChange={this.handleClick}
+            name="bottom"
+            value ={this.state.bottom}
+            >
+            {
+              this.state.bottomArray.map( key => {
+                return <option>{key}</option>
+              } )
+            }
+          </select>
+        </div>
+        
+        <span>
+          <button
+            className="button"
+            onClick={this.handleControl}
+            name="left"
+            id="bottom"
+            >
+            <i class="fas fa-chevron-left" style={{color: "#3273dc"}}></i>
+          </button>
+          <button
+            className="button"
+            onClick={this.handleControl}
+            name="random"
+            id="bottom"
+            >
+            <i class="fas fa-circle" style={{color: "#3273dc"}}></i>
+          </button>
+          <button
+            className="button"
+            onClick={this.handleControl}
+            name="right"
+            id="bottom"
             >
               <i class="fas fa-chevron-right" style={{color: "#3273dc"}}></i>
           </button>
