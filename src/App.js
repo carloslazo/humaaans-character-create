@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import body from './body.js';
+import Body from './body.js';
 import bottom from './bottom.js';
 
+let body = []
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -51,14 +52,17 @@ class App extends React.Component {
     this.setState({[e.currentTarget.id]: nextIndex})
   }
   
-  handlePicker(e){
-    console.log(document.getElementById("Skin"));
-    document.getElementById("Skin").style["fill"] = "blue";
+  handlePicker(random){
+    console.log(random, "hey");
   }
   
   render(){
+    
     return (
     <div className="App">
+      <Body
+        handlePicker={this.handlePicker}
+        />
       <div
         onClick={this.handlePicker}
         >
