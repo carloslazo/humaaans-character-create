@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChromePicker } from 'react-color';
+import { PhotoshopPicker } from 'react-color';
 import './App.css';
 
 let body = []
@@ -1133,6 +1133,10 @@ class App extends React.Component {
    this.setState({[e.target.name]: value})
   }
   
+  handleChange(color, event) {
+    console.log(color, "hey");
+  }
+  
   handleControl(e){
     let currentIndex = this.state[e.currentTarget.id + "Array"].findIndex((i) => this.state[e.currentTarget.id] == i)
     
@@ -1167,7 +1171,8 @@ class App extends React.Component {
     return (
     <div className="App">
       
-      <ChromePicker/>
+      <PhotoshopPicker
+        />
         
       <div>
         <div> {this.body[this.state.body]}</div>
