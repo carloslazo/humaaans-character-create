@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChromePicker } from 'react-color';
+import { SketchPicker } from 'react-color';
 import './App.css';
 
 let body = []
@@ -2282,14 +2282,14 @@ class App extends React.Component {
     return (
     <div className="App">
 
-        <ChromePicker
+        <SketchPicker
         onChange={ this.handleChange }
         color={this.state.background}
         />
         
       <div>
         <div> {this.bodys()} </div>        
-          <div> {this.bottoms()} </div>        
+        <div> {this.bottoms()} </div>        
       </div>
       
       <div>
