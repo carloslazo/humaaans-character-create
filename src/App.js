@@ -1,5 +1,6 @@
 import React from 'react';
-import { SketchPicker } from 'react-color';
+import { ChromePicker } from 'react-color';
+import Modal from './components/modal.js';
 import './App.css';
 
 let body = []
@@ -12,7 +13,8 @@ class App extends React.Component {
       "bodyArray": [],
       "bottom": "baggyPants",
       "bottomArray": [],
-      "background": "#B28B67"
+      "background": "#B28B67",
+      modalState: false
     }
     
     this.body = 
@@ -1122,6 +1124,7 @@ class App extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.bodys = this.bodys.bind(this);
     this.bottoms = this.bottoms.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
 
   }
   
@@ -2249,6 +2252,14 @@ class App extends React.Component {
     this.setState({background: color.hex})
   }
   
+  toggleModal() {    
+    this.setState((prev, props) => {
+      const newState = !prev.modalState;
+      
+      return { modalState: newState };
+    });
+  }
+  
   handleControl(e){
     let currentIndex = this.state[e.currentTarget.id + "Array"].findIndex((i) => this.state[e.currentTarget.id] == i)
     
@@ -2281,11 +2292,20 @@ class App extends React.Component {
   render(){
     return (
     <div className="App">
-
-        <SketchPicker
-        onChange={ this.handleChange }
-        color={this.state.background}
-        />
+      
+      <a className="button is-primary" onClick={this.toggleModal}>
+              Open Modal
+            </a>
+            
+            <Modal 
+                  closeModal={this.toggleModal} 
+                  modalState={this.state.modalState} 
+                >
+                <ChromePicker
+                onChange={ this.handleChange }
+                color={this.state.background}
+                />
+                </Modal>
         
       <div>
         <div> {this.bodys()} </div>        
