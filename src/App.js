@@ -2291,11 +2291,11 @@ class App extends React.Component {
   
   render(){
     return (
-    <div className="App">
-      
-      <a className="button is-primary" onClick={this.toggleModal}>
-              Open Modal
-            </a>
+    <div className="App">    
+      <div>
+        <div> {this.bodys()} </div>        
+        <div> {this.bottoms()} </div>        
+      </div>
             
             <Modal 
                   closeModal={this.toggleModal} 
@@ -2306,97 +2306,102 @@ class App extends React.Component {
                 color={this.state.background}
                 />
                 </Modal>
-        
-      <div>
-        <div> {this.bodys()} </div>        
-        <div> {this.bottoms()} </div>        
-      </div>
-      
-      <div>
-        <div class="select">
-          <select
-            onChange={this.handleClick}
-            name="body"
-            value ={this.state.body}
-            >
-            {
-              this.state.bodyArray.map( key => {
-                return <option>{key}</option>
-              } )
-            }
-          </select>
-        </div>
-        
-        <span>
-          <button
-            className="button"
-            onClick={this.handleControl}
-            name="left"
-            id="body"
-            >
-            <i class="fas fa-chevron-left" style={{color: "#3273dc"}}></i>
-          </button>
-          <button
-            className="button"
-            onClick={this.handleControl}
-            name="random"
-            id="body"
-            >
-            <i class="fas fa-circle" style={{color: "#3273dc"}}></i>
-          </button>
-          <button
-            className="button"
-            onClick={this.handleControl}
-            name="right"
-            id="body"
-            >
-              <i class="fas fa-chevron-right" style={{color: "#3273dc"}}></i>
-          </button>
-        </span>        
-      </div>
-      
-      <div>
-        <div class="select">
-          <select
-            onChange={this.handleClick}
-            name="bottom"
-            value ={this.state.bottom}
-            >
-            {
-              this.state.bottomArray.map( key => {
-                return <option>{key}</option>
-              } )
-            }
-          </select>
-        </div>
-        
-        <span>
-          <button
-            className="button"
-            onClick={this.handleControl}
-            name="left"
-            id="bottom"
-            >
-            <i class="fas fa-chevron-left" style={{color: "#3273dc"}}></i>
-          </button>
-          <button
-            className="button"
-            onClick={this.handleControl}
-            name="random"
-            id="bottom"
-            >
-            <i class="fas fa-circle" style={{color: "#3273dc"}}></i>
-          </button>
-          <button
-            className="button"
-            onClick={this.handleControl}
-            name="right"
-            id="bottom"
-            >
-              <i class="fas fa-chevron-right" style={{color: "#3273dc"}}></i>
-          </button>
-        </span>        
-      </div>
+              <div class="bulma-card">
+                <div class="card">
+                  <div class="card-content">
+                    <div class="content">
+                      <div>
+                        <div class="select">
+                          <select
+                            onChange={this.handleClick}
+                            name="body"
+                            value ={this.state.body}
+                            >
+                            {
+                              this.state.bodyArray.map( key => {
+                                return <option>{key}</option>
+                              } )
+                            }
+                          </select>
+                        </div>
+                        
+                        <span>
+                          <button
+                            className="button"
+                            onClick={this.handleControl}
+                            name="left"
+                            id="body"
+                            >
+                            <i class="fas fa-chevron-left" style={{color: "#3273dc"}}></i>
+                          </button>
+                          <button
+                            className="button"
+                            onClick={this.handleControl}
+                            name="random"
+                            id="body"
+                            >
+                            <i class="fas fa-circle" style={{color: "#3273dc"}}></i>
+                          </button>
+                          <button
+                            className="button"
+                            onClick={this.handleControl}
+                            name="right"
+                            id="body"
+                            >
+                              <i class="fas fa-chevron-right" style={{color: "#3273dc"}}></i>
+                          </button>
+                        </span>        
+                      </div>
+                      
+                      <div>
+                        <div class="select">
+                          <select
+                            onChange={this.handleClick}
+                            name="bottom"
+                            value ={this.state.bottom}
+                            >
+                            {
+                              this.state.bottomArray.map( key => {
+                                return <option>{key}</option>
+                              } )
+                            }
+                          </select>
+                        </div>
+                        
+                        <span>
+                          <button
+                            className="button"
+                            onClick={this.handleControl}
+                            name="left"
+                            id="bottom"
+                            >
+                            <i class="fas fa-chevron-left" style={{color: "#3273dc"}}></i>
+                          </button>
+                          <button
+                            className="button"
+                            onClick={this.handleControl}
+                            name="random"
+                            id="bottom"
+                            >
+                            <i class="fas fa-circle" style={{color: "#3273dc"}}></i>
+                          </button>
+                          <button
+                            className="button"
+                            onClick={this.handleControl}
+                            name="right"
+                            id="bottom"
+                            >
+                              <i class="fas fa-chevron-right" style={{color: "#3273dc"}}></i>
+                          </button>
+                        </span>       
+                      </div>
+                      <a className="button is-primary" onClick={this.toggleModal}>
+                              Color Picker
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
     </div>
     );
   }

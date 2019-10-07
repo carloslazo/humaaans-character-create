@@ -14,7 +14,7 @@ const Modal = ({ children, closeModal, modalState, title }) => {
           <button className="delete" onClick={closeModal} />
         </header>
         <section className="modal-card-body">
-          <div className="content">
+          <div className="content-modal">
             {children}
           </div>
         </section>

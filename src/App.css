@@ -16,10 +16,15 @@
 }
 
 .modal-background{
-  background-color: rgba(10, 10, 10, 0.2);
+  background-color: rgba(10, 10, 10, 0.2)
 }
 
-.content{
+.bulma-card{
+  width: 400px;
+  margin: auto;
+}
+
+.content-modal{
   display: flex;
   justify-content: center;
 }
