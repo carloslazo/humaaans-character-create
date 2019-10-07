@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChromePicker } from 'react-color';
 import Modal from './components/modal.js';
+import head from './head.js';
 import './App.css';
 
 let body = []
@@ -2290,9 +2291,11 @@ class App extends React.Component {
   }
   
   render(){
+    console.log(head);
     return (
     <div className="App">    
       <div>
+        <div>  </div>
         <div> {this.bodys()} </div>        
         <div> {this.bottoms()} </div>        
       </div>
@@ -2396,7 +2399,7 @@ class App extends React.Component {
                         </span>       
                       </div>
                       <a className="button is-primary" onClick={this.toggleModal}>
-                              Color Picker
+                              Skin Color Picker
                       </a>
                     </div>
                   </div>
