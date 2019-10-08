@@ -2,6 +2,9 @@ import React from 'react';
 import { ChromePicker } from 'react-color';
 import Modal from './components/modal.js';
 import head from './head.js';
+import ControlPanel from './components/controlPanel.js';
+import FullControlPanel from './components/fullControlPanel.js';
+
 import './App.css';
 
 let body = []
@@ -1125,6 +1128,7 @@ class App extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.bodys = this.bodys.bind(this);
     this.bottoms = this.bottoms.bind(this);
+    this.heads = this.heads.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
 
   }
@@ -2244,6 +2248,10 @@ class App extends React.Component {
     return bottom[this.state.bottom]
   }
   
+  heads(){
+    return head["afro"]
+  }
+  
   handleClick(e){
    let value = e.target.value
    this.setState({[e.target.name]: value})
@@ -2262,6 +2270,7 @@ class App extends React.Component {
   }
   
   handleControl(e){
+    console.log("hi");
     let currentIndex = this.state[e.currentTarget.id + "Array"].findIndex((i) => this.state[e.currentTarget.id] == i)
     
     let nextIndex;
@@ -2291,113 +2300,46 @@ class App extends React.Component {
   }
   
   render(){
-    console.log(head);
     return (
     <div className="App">    
       <div>
-        <div>  </div>
+        <div> {this.heads()} </div>
         <div> {this.bodys()} </div>        
         <div> {this.bottoms()} </div>        
       </div>
             
-            <Modal 
-                  closeModal={this.toggleModal} 
-                  modalState={this.state.modalState} 
-                >
-                <ChromePicker
-                onChange={ this.handleChange }
-                color={this.state.background}
-                />
-                </Modal>
+      <Modal 
+        closeModal={this.toggleModal} 
+        modalState={this.state.modalState} 
+      >
+        <ChromePicker
+        onChange={ this.handleChange }
+        color={this.state.background}
+        />
+      </Modal>
               <div class="bulma-card">
                 <div class="card">
                   <div class="card-content">
                     <div class="content">
-                      <div>
-                        <div class="select">
-                          <select
-                            onChange={this.handleClick}
-                            name="body"
-                            value ={this.state.body}
-                            >
-                            {
-                              this.state.bodyArray.map( key => {
-                                return <option>{key}</option>
-                              } )
-                            }
-                          </select>
-                        </div>
-                        
-                        <span>
-                          <button
-                            className="button"
-                            onClick={this.handleControl}
-                            name="left"
-                            id="body"
-                            >
-                            <i class="fas fa-chevron-left" style={{color: "#3273dc"}}></i>
-                          </button>
-                          <button
-                            className="button"
-                            onClick={this.handleControl}
-                            name="random"
-                            id="body"
-                            >
-                            <i class="fas fa-circle" style={{color: "#3273dc"}}></i>
-                          </button>
-                          <button
-                            className="button"
-                            onClick={this.handleControl}
-                            name="right"
-                            id="body"
-                            >
-                              <i class="fas fa-chevron-right" style={{color: "#3273dc"}}></i>
-                          </button>
-                        </span>        
-                      </div>
                       
-                      <div>
-                        <div class="select">
-                          <select
-                            onChange={this.handleClick}
-                            name="bottom"
-                            value ={this.state.bottom}
-                            >
-                            {
-                              this.state.bottomArray.map( key => {
-                                return <option>{key}</option>
-                              } )
-                            }
-                          </select>
-                        </div>
-                        
-                        <span>
-                          <button
-                            className="button"
-                            onClick={this.handleControl}
-                            name="left"
-                            id="bottom"
-                            >
-                            <i class="fas fa-chevron-left" style={{color: "#3273dc"}}></i>
-                          </button>
-                          <button
-                            className="button"
-                            onClick={this.handleControl}
-                            name="random"
-                            id="bottom"
-                            >
-                            <i class="fas fa-circle" style={{color: "#3273dc"}}></i>
-                          </button>
-                          <button
-                            className="button"
-                            onClick={this.handleControl}
-                            name="right"
-                            id="bottom"
-                            >
-                              <i class="fas fa-chevron-right" style={{color: "#3273dc"}}></i>
-                          </button>
-                        </span>       
-                      </div>
+                      <FullControlPanel
+                        onChange={this.handleClick}
+                        name="body"
+                        value={this.state.body}
+                        array={this.state.bodyArray}
+                        onClick={this.handleControl}
+                        id="body"
+                        />
+                      
+                        <FullControlPanel
+                          onChange={this.handleClick}
+                          name="bottom"
+                          value={this.state.bottom}
+                          array={this.state.bottomArray}
+                          onClick={this.handleControl}
+                          id="bottom"
+                          />
+                      
                       <a className="button is-primary" onClick={this.toggleModal}>
                               Skin Color Picker
                       </a>
