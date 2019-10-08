@@ -4,12 +4,13 @@ import ControlPanel from "./controlPanel.js"
 
 function FullControlPanel(props){
   return(
-    <div>
+    <div className="full-control-panel">
       <div class="select">
         <select
           onChange={props.onChange}
           name={props.name}
           value ={props.value}
+          className="select-container"
           >
           {
             props.array.map( key => {

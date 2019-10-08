@@ -3506,9 +3506,7 @@ class App extends React.Component {
       </Modal>
               <div class="bulma-card">
                 <div class="card">
-                  <div class="card-content">
-                    <div class="content">
-                      
+                  <div class="card-content">                      
                       <FullControlPanel
                         onChange={this.handleClick}
                         name="head"
@@ -3540,7 +3538,6 @@ class App extends React.Component {
                       <a className="button is-primary" onClick={this.toggleModal}>
                               Skin Color Picker
                       </a>
-                    </div>
                   </div>
                 </div>
               </div>

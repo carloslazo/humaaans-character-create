@@ -48,6 +48,14 @@
   text-align: center;
 }
 
+.select-container{
+  width: 170px;
+}
+
+.full-control-panel{
+  margin: 15px 0 15px 0;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
