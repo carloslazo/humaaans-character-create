@@ -3504,6 +3504,7 @@ class App extends React.Component {
         color={this.state.background}
         />
       </Modal>
+      <div className="card-container">
               <div class="bulma-card">
                 <div class="card">
                   <div class="card-content">                      
@@ -3541,6 +3542,7 @@ class App extends React.Component {
                   </div>
                 </div>
               </div>
+          </div>
     </div>
     );
   }
