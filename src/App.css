@@ -2,6 +2,18 @@
   border-width: 0px;
 }
 
+.head{
+  margin-bottom: -18px;
+  position: relative;
+  z-index: -1;
+}
+
+.bottom{
+  margin-top: -85px;
+  position: relative;
+  z-index: -1;
+}
+
 .modal{
   opacity: 1;
   transition: opacity 300ms ease-in-out;
@@ -53,13 +65,6 @@
 
 .pants-position{
   margin-top: -83px;
-  position: relative;
-  z-index: -1;
-}
-
-
-.head{
-  margin-bottom: -8px;
   position: relative;
   z-index: -1;
 }

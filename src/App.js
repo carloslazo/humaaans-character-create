@@ -3490,9 +3490,9 @@ class App extends React.Component {
     return (
     <div className="App">    
       <div>
-        <div> {this.heads()} </div>
+        <div className="head"> {this.heads()} </div>
         <div> {this.bodys()} </div>        
-        <div> {this.bottoms()} </div>        
+        <div className="bottom"> {this.bottoms()} </div>        
       </div>
             
       <Modal 
