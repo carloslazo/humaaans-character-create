@@ -3494,7 +3494,7 @@ class App extends React.Component {
         <div> {this.bodys()} </div>        
         <div className="bottom"> {this.bottoms()} </div>        
       </div>
-            
+        
       <Modal 
         closeModal={this.toggleModal} 
         modalState={this.state.modalState} 

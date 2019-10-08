@@ -18,6 +18,13 @@
   margin-top: -50px;
 }
 
+.modal-card{
+  width: 279px;
+}
+
+.button.is-primary{
+  background-color: rgb(50, 115, 220);
+}
 .modal{
   opacity: 1;
   transition: opacity 300ms ease-in-out;
